@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Introduction</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #12122a;
+      --border: #1e1e3a;
+      --accent: #00d4ff;
+      --accent2: #7b2cbf;
+      --warn: #e94560;
+      --text: #e0e0e0;
+      --muted: #888;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .content {
+      max-width: 960px;
+      width: 100%;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    h4 {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .tags span {
+      font-size: 0.85rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 6px 16px;
+      border-radius: 6px;
+      color: var(--muted);
+    }
+
+    /* Career */
+    .career-list { display: flex; flex-direction: column; gap: 0; }
+    .career-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .career-item:last-child { border-bottom: none; }
+    .career-num {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      min-width: 28px;
+    }
+    .career-name { font-size: 1rem; }
+
+    /* Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .card p, .card li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .card ul { padding-left: 18px; }
+    .card ul li { margin-bottom: 4px; }
+    .card-wide { grid-column: 1 / -1; }
+
+    /* Scope */
+    .scope-can {
+      background: rgba(0,212,255,0.06);
+      border-color: rgba(0,212,255,0.2);
+    }
+    .scope-can h4 { color: var(--accent); }
+    .scope-not {
+      background: rgba(233,69,96,0.06);
+      border-color: rgba(233,69,96,0.2);
+    }
+    .scope-not h4 { color: var(--warn); }
+
+    /* Examples */
+    .example-card {
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .example-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .example-card h4 { margin-bottom: 8px; }
+    .example-card p { font-size: 0.85rem; color: var(--muted); }
+
+    /* Hero sub */
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-top: 16px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #444;
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="slide">
+    <div class="content">
+      <p style="font-size: 0.9rem; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 12px;">SELF INTRODUCTION</p>
+      <h2 style="font-size: 2.8rem; margin-bottom: 8px;">西村 要亮</h2>
+      <p style="font-size: 1rem; color: var(--muted); margin-bottom: 32px;">Yosuke Nishimura</p>
+      <p class="hero-sub">
+        ビジネス課題をデータとAIで解きほぐし、<br>
+        「次に何をすべきか」が見えるアウトプットを作る人です。
+      </p>
+      <p style="font-size: 0.9rem; color: var(--muted); margin-top: 24px; line-height: 1.8;">
+        課題定義 → 仮説立案 → 検証設計 → データ抽出（SQL） → 分析 → BIで可視化<br>
+        までを一貫して対応します。
+      </p>
+      <div class="tags" style="margin-top: 28px;">
+        <span>📚 読書</span>
+        <span>⚽ フットサル</span>
+        <span>🔥 焚き火</span>
+        <span>🐱 猫好き</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section class="slide">
+    <div class="content">
+      <h2>🧭 職歴</h2>
+      <div class="career-list">
+        <div class="career-item">
+          <span class="career-num">01</span>
+          <span class="career-name">船井総合研究所</span>
+        </div>
+        <div class="career-item">
+          <span class="career-num">02</span>
+          <span class="career-name">三菱UFJリサーチ＆コンサルティング</span>
+        </div>
+        <div class="career-item">
+          <span class="career-num">03</span>
+          <span class="career-name">ミスミ</span>
+        </div>
+        <div class="career-item">
+          <span class="career-num">04</span>
+          <span class="career-name">アマゾンジャパン</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="slide">
+    <div class="content">
+      <h2>🧠 コンセプト</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h4>🔭 知的好奇心旺盛</h4>
+          <p>新しい技術や手法を素早くキャッチアップし、実務で使える形に落とし込みます。<br>「面白そう」で終わらせず、現場で回る仕組みにすることを大事にしています。</p>
+        </div>
+        <div class="card">
+          <h4>💼 ビジネス × データ × AI</h4>
+          <p>技術導入自体が目的ではなく、「ビジネス上意味があるか」「意思決定に使えるか」「実行可能か」「コストに見合うか」を常に問いながら、価値のあることにフォーカスします。</p>
+        </div>
+        <div class="card card-wide">
+          <h4>🧳 副業の目的</h4>
+          <p>所属企業とは異なるユースケースへの対応経験を積み、汎用的なスキルを高めることが目的です。<br>本業で培った分析・BI・AI活用の力を、別の環境でも通用する形に磨いていきたいと考えています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section class="slide">
+    <div class="content">
+      <h2>💪 現在の強み</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h4>📊 データアナリシス</h4>
+          <p>課題に対して、仮説立案 → 検証設計 → データ抽出 → 分析を一貫して対応。</p>
+        </div>
+        <div class="card">
+          <h4>📈 BIエンジニアリング</h4>
+          <p>Dataset作成からDashboard構築まで。使われ続ける設計を重視。</p>
+        </div>
+        <div class="card">
+          <h4>🤖 AI DLC</h4>
+          <p>KiroなどのAI IDEを活用した実装・自動化・効率化。</p>
+        </div>
+        <div class="card">
+          <h4>🧠 ビジネス・マーケ視点</h4>
+          <p>机上の空論ではなく、ビジネス的に意味があるかの物差しを持っています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scope + Examples -->
+  <section class="slide">
+    <div class="content">
+      <h2>🧩 対応範囲</h2>
+      <div class="grid-2">
+        <div class="card scope-can">
+          <h4>✅ 経験あり</h4>
+          <ul>
+            <li>SQLでのデータ抽出・分析</li>
+            <li>Dashboard作成</li>
+            <li>AWSを使ったシンプルなシステム</li>
+            <li>Kiroを使った自動化</li>
+          </ul>
+        </div>
+        <div class="card scope-not">
+          <h4>⚠️ 経験なし・限定的</h4>
+          <ul>
+            <li>データパイプライン構築</li>
+            <li>DWH構築</li>
+            <li>大がかりなシステム構築</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 48px; margin-bottom: 24px;">🛠️ できること（例）</h3>
+      <div class="grid-2">
+        <div class="card example-card">
+          <div class="example-icon">🧾</div>
+          <h4>KPI / 指標の整理</h4>
+          <p>意思決定に使える指標設計</p>
+        </div>
+        <div class="card example-card">
+          <div class="example-icon">�</div>
+          <h4>施策効果検証</h4>
+          <p>仮説と検証フローの構築</p>
+        </div>
+        <div class="card example-card">
+          <div class="example-icon">📊</div>
+          <h4>ダッシュボード整備</h4>
+          <p>見やすく、使われる形への改善</p>
+        </div>
+        <div class="card example-card">
+          <div class="example-icon">⚙️</div>
+          <h4>業務自動化（小規模）</h4>
+          <p>定型作業やレポート作成の効率化</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Thank you for reading.</footer>
+
+</body>
+</html>
